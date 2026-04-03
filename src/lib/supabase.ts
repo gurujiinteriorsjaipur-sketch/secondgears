@@ -267,7 +267,7 @@ export async function getRecentlyViewed(userId: string) {
 export async function uploadCarImage(file: File, carId: string) {
   const fileExt = file.name.split('.').pop();
   const fileName = `${carId}/${Date.now()}.${fileExt}`;
-  const { data, error } = await supabase.storage
+  const { error } = await supabase.storage
     .from('car-images')
     .upload(fileName, file);
   

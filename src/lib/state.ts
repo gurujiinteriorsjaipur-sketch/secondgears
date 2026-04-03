@@ -52,7 +52,7 @@ export async function initAuth() {
   notify();
 
   // Listen for auth changes
-  supabase.auth.onAuthStateChange(async (event, session) => {
+  supabase.auth.onAuthStateChange(async (_event, session) => {
     state.user = session?.user || null;
     if (session?.user) {
       const { data: profile } = await getProfile(session.user.id);

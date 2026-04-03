@@ -1,7 +1,7 @@
 import { renderNavbar, initNavbar } from '../components/navbar';
 import { renderFooter } from '../components/footer';
 import { renderCarCard } from '../components/car-card';
-import { getUserCars, getFavorites, getMessages, updateProfile, deleteCar } from '../lib/supabase';
+import { getUserCars, getFavorites, getMessages, updateProfile } from '../lib/supabase';
 import { getState, formatPrice } from '../lib/state';
 import { showToast } from '../components/ui';
 import { router } from '../lib/router';

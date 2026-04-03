@@ -62,8 +62,13 @@ export async function renderComparePage() {
               <tr>
                 <td style="font-weight:600;color:var(--on-surface-variant);">${row.label}</td>
                 ${cars.map(c => {
-                  let val = row.key.includes('.') ? row.key.split('.').reduce((o: any, k: string) => o?.[k], c) : c[row.key];
-                  if (row.format) val = row.format(val);
+                  let val: any = c;
+                  if (row.key.includes('.')) {
+                    for (const k of row.key.split('.')) val = val?.[k];
+                  } else {
+                    val = c[row.key];
+                  }
+                  if (row.format) val = (row.format as any)(val);
                   return `<td>${val ?? '—'}</td>`;
                 }).join('')}
               </tr>

@@ -1,8 +1,8 @@
 import { renderNavbar, initNavbar } from '../components/navbar';
 import { renderFooter } from '../components/footer';
 import { renderCarCard, renderCarCardSkeleton } from '../components/car-card';
-import { getCars, getFeaturedCars } from '../lib/supabase';
-import { formatPrice, addToCompare, getState } from '../lib/state';
+import { getFeaturedCars } from '../lib/supabase';
+import { addToCompare } from '../lib/state';
 import { showToast } from '../components/ui';
 import { router } from '../lib/router';
 import { DUMMY_CARS } from '../lib/dummy-data';

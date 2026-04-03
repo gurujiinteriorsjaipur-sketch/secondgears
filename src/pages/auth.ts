@@ -1,4 +1,3 @@
-import { renderNavbar, initNavbar } from '../components/navbar';
 import { signIn, signUp, signInWithGoogle } from '../lib/supabase';
 import { showToast } from '../components/ui';
 import { router } from '../lib/router';

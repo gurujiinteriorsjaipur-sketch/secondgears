@@ -3,8 +3,6 @@ import { renderFooter } from '../components/footer';
 import { renderCarCard, renderCarCardSkeleton } from '../components/car-card';
 import { getCars } from '../lib/supabase';
 import { DUMMY_CARS } from '../lib/dummy-data';
-import { addToCompare } from '../lib/state';
-import { showToast } from '../components/ui';
 
 const BRANDS = ['Maruti', 'Hyundai', 'Honda', 'Toyota', 'BMW', 'Mercedes', 'Audi', 'Tata'];
 const FUEL_TYPES = ['Petrol', 'Diesel', 'CNG', 'Electric', 'Hybrid'];

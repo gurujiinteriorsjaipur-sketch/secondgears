@@ -209,7 +209,7 @@ function initDetailInteractions(car: any) {
       <div class="form-group"><label class="form-label">Preferred Time</label><select class="form-select" name="time"><option>10:00 AM</option><option>12:00 PM</option><option>2:00 PM</option><option>4:00 PM</option></select></div>
       <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" name="phone" required></div>
       <button type="submit" class="btn btn--primary" style="width:100%">Schedule Test Drive</button>
-    `, async (formData) => {
+    `, async (_formData) => {
       showToast('Test drive scheduled successfully!', 'success');
     });
   });
